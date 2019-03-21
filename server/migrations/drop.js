@@ -7,7 +7,7 @@ import db from '../config/database';
 const dropAllTables = async () => {
 	const client = await db.connect();
 	try {
-		const dropTables = 'DROP TABLE IF EXISTS users, meetups, questions, rsvps, comments';
+		const dropTables = 'DROP TABLE IF EXISTS users, positions';
 		await client.query(dropTables);
 	} catch (error) {
 		throw error;
