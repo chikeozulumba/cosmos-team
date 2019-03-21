@@ -11,7 +11,7 @@
     "heroku-postbuild": "npm run build",
     "lint": "node_modules/.bin/eslint ./server/*.js",
     "lint-fix": "node_modules/.bin/eslint --fix ./server --ext .js --color",
-    "migrations": "babel-node ./server/migrations/drop.js && babel-node ./server/migrations/init.js --",
+    "migrate": "babel-node ./server/migrations/drop.js && babel-node ./server/migrations/init.js --",
     "prod": "node build/app.js",
     "start": "node_modules/.bin/nodemon server/app.js --exec babel-node -- ",
     "test": "npm run migrations && nyc mocha server/tests/**/*spec.js --exit"
